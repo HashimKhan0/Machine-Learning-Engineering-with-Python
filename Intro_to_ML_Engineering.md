@@ -67,7 +67,51 @@
         - use a variety of techniques and tools to ensure that the data that left the source system is what lands in the data storage layer
     2. **Stability**
         - ensure data pipelines are robust, reliable, and can be trusted to deliver when needed
-    3. **Acess**
+    3. **Access**
         - use a variety of tech to use with the other engineers to help build appropriate models
 
 ## Working as an Effective Team
+* this section will discuss important points to consider when forming a team or even working on a team
+    1. nobody can do everything
+    2. blended is best
+        * within a project you will need mathematics, code, engineering, project management, communication etc
+    3. tie your team structure to your projects in a dynamic way
+
+## ML Engineering in the Real World
+* here are some important aspects of ML Engineering in the real world
+    1. the ultimate goal is to generate **value**
+    2. to be a succesful ML engineer in the real world you have to understand the tech but also the business and the customer
+    3. communcation is key
+
+* ML is ideal for cases when you want to do a semi-routine task faster, with more accuracy, or at a far larger scale than is possible with other solutions
+* ex : anomaly detection of energy pricing signals, forcasting consumption
+* ML is usually the answer to well framed mathematical or statiscal problem
+* ML at its core is a series of algorithms that can iterate some internal paramaters based on data
+
+## What does an ML Solution Look Like?
+* the power in ML does not only lie in voice assistance or visual recognition apps
+* the power of ML lies in the fact that where there is data and an appropriate problem it can be *integral* to the solution
+* ex: text completion is often using a natural language model *under* the hood
+* social media reccomendations 
+* app forcasting arrival time are using regression 
+* loan applications are passed through a classifier
+
+
+* we start by considering the broad elements that constitue to **any** ML solution
+    1. Storage Layer
+        * endpoint of data engineering process and beginning of ML process
+        * includes data for training, results from models, artifcats, important metadata
+        * also considered as layer for code
+    2. Compute Layer
+        * where the *magic* happens(and most of the book)
+        * training, testing, predicting, transformation 
+    3. Application Layer
+        * this is where you share the ML solutions with other systems
+        * aplication database insertion to API endpoints, message queues, visualization tools
+        * the layer through which customer will eventually use results
+        * must be engineered to provide clean and understandable outputs
+
+## Examples of High-level ML System Design
+
+### Ex 1: Batch Anomaly Detection Service
+    * You work for a tech-savvy taxi ride company with a fleet of thousands of cars. The organization wants to start making ride times more consistent and understand longer journeys in order to improve the customer experience and, thereby, increase retention and return business. Your ML team is employed to create an anomaly detection service to find rides that have unusual ride time or ride length behaviors. You all get to work, and your data scientists find that if you perform clustering on sets of rides using the features of ride distance and time, you can clearly identify outliers worth investigating by the operations team. The data scientists present the findings to the CTO and other stakeholders before getting the go-ahead to develop this into a service that will provide an outlier flag as a new field in one of the main tables of the company’s internal analysis tool.
