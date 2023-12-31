@@ -96,3 +96,76 @@
 * two variants that are extremely popular: **Scrum** and **Kanban**
 * Scrum projects are centered around short units of work called sprints: make additions to product from ideation through to deployment
 * Kanban projects aim to achieve a steady flow of tasks from an organized backloh
+
+### 4. Deploy
+* to be succesfully deploy our solution we need to 
+- first know our deployment options: what infrastructure is available and is appropriate for the task?
+- then get the solution in our development environment onto a the production infrasctructure
+* this is where the concepts of DevOps and MLOps come into play 
+
+#### Knowing your Deployment Options
+
+##### On Premises Deployment
+* deploy our solutions in-house on owned infrasctructure
+* popular for large institutions with legacy software and regulatory constraints on data location and processing
+* requires alot more involvement from other teams 
+* big advantage of security 
+* requires larger investment upfront for hardware 
+
+##### Infrasctructur-as-a-Service
+* lowest levels of abstraction for cloud deployment
+* based on concept of virtualization
+* no need for maintenance
+* allows for scalability by scaling up Iaas srequest
+* maximizes control but minimizes ease 
+* ex: AWS, S3, EC2
+
+##### Platform-as-a-Service
+* provides lots of capabilities without needing to understand the underlying structure
+* focus solely on dev tasks that the platform supports
+* ex : AWS Lambda functions
+
+#### Understanding DevOps and MLOps
+* powerful idea in modern software dev to continously update code (CI/CD)
+* testing, integrating, building, packaaging, and deploying should be as automated as possible
+* 3 lifecycle stages
+1. Dev
+    * Testing
+        - Unit tests: tests aimed at testing the functionality smallest pieces of code. -> pytest or unittest
+        - Integration tests: ensure that interfaces within the code and to other solutions work. -> Selenium
+        - Acceptance tests: business focused tests. -> Behave
+        - UI tests: ensuring any frontends behave as expected.
+    * Linting
+    * Formatting
+    * Building
+2. ML
+    * Training
+    * Predicting
+    * Building
+        - sklearn pipelines
+        - spark ML
+        - zenML
+    * Staging
+        - MLflow
+        - Comet.ml
+    * Monitoring
+        - Seldon
+        - Neptune.ai
+        - Evidently.ai
+        - Arthur.ai
+3. Operations
+    * Releasing
+        - Twine
+        - Pip
+        - GitHub
+        - BitBucket
+    * Deploying
+        - Docker
+        - Github Actions
+        - Jenkins
+        - TravisCI
+        CircleCI
+    * Monitoring
+        - DataDog
+        - Dynatrace
+        - Prometheus
