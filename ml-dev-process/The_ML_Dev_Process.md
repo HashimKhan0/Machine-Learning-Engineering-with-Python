@@ -169,3 +169,10 @@
         - DataDog
         - Dynatrace
         - Prometheus
+    
+#### Continous Model Performance Testing
+* take some base reference data and start to build some different tests to give confidence that the model will perform
+* before this we need a few things
+    1. Within actions or tests you need to retrieve reference data for model validation
+    2. Retrieve the models you wish to test
+    3. define tests that you want to run that are not too senstitive but also not too geared towards the data set
